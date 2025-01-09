@@ -42,3 +42,13 @@ if nyereg_van:
     print("c) Igen, érintett nyerget.")
 else:
     print("c) Nem érintett nyerget.")
+
+# d) Legnagyobb szintkülönbség
+max_kulonbseg = 0
+
+for i in range(1, n):
+    kulonbseg = t[i] - t[i - 1] if t[i] - t[i - 1] >= 0 else -(t[i] - t[i - 1])
+    if kulonbseg > max_kulonbseg:
+        max_kulonbseg = kulonbseg
+
+print("d) A legnagyobb szintkülönbség:", max_kulonbseg, "m.")
